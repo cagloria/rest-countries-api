@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import $ from "jquery";
 import ThemeSwitch from "./components/ThemeSwitch";
 import CountryInput from "./components/CountryInput";
 import RegionSelect from "./components/RegionSelect";
 import Country from "./components/Country";
 
 function App() {
-    const countries = [{ name: "CountryA" }, { name: "CountryB" }];
+    const [countries, setCountries] = useState([]);
+
+    $.get("https://restcountries.eu/rest/v2/all", function (data) {
+        setCountries(data);
+    });
 
     return (
         <>
