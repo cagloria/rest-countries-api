@@ -8,10 +8,15 @@ import Country from "./components/Country";
 
 function App() {
     const [countries, setCountries] = useState([]);
+    const [countrySearch, setCountrySearch] = useState("");
 
     $.get("https://restcountries.eu/rest/v2/all", function (data) {
         setCountries(data);
     });
+
+    function handleCountrySearch(value) {
+        setCountrySearch(value);
+    }
 
     return (
         <>
@@ -22,7 +27,7 @@ function App() {
 
             <main>
                 <section className="search-section">
-                    <CountryInput />
+                    <CountryInput onCountryInput={handleCountrySearch} />
                     <RegionSelect />
                 </section>
 
