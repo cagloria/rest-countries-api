@@ -1,8 +1,8 @@
 import React from "react";
 
-function CountryInput({ onCountryInput }) {
+function NameInput({ onNameInput }) {
     function handleChange(event) {
-        onCountryInput(event.target.value);
+        onNameInput(event.target.value);
     }
 
     return (
@@ -15,4 +15,4 @@ function CountryInput({ onCountryInput }) {
     );
 }
 
-export default CountryInput;
+export default NameInput;
