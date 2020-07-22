@@ -29,7 +29,7 @@ function App() {
                 <section className="country-section">
                     <ul>
                         {countries.map((country) => (
-                            <Country key={country.name} name={country.name} />
+                            <Country key={country.name} obj={country} />
                         ))}
                     </ul>
                 </section>
