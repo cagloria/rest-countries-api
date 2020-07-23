@@ -9,6 +9,7 @@ import Country from "./components/Country";
 function App() {
     const [countries, setCountries] = useState([]);
     const [nameSearch, setNameSearch] = useState("");
+    const [regionSearch, setRegionSearch] = useState("");
 
     $.get("https://restcountries.eu/rest/v2/all", function (data) {
         setCountries(data);
@@ -23,6 +24,14 @@ function App() {
     }
 
     /**
+     * Set the state regionSearch to match RegionSelect's value
+     * @param {String} input    Region select value
+     */
+    function handleRegionSelect(input) {
+        setRegionSearch(input);
+    }
+
+    /**
      * Check if the country's name matches the name search
      * @param {Object} country  Country JSON object
      */
@@ -31,7 +40,22 @@ function App() {
         return name.toLowerCase().includes(nameSearch.toLowerCase());
     }
 
-    const filteredCountries = countries.filter((country) => nameMatch(country));
+    /**
+     * Check if the country's region matches the selected region
+     * @param {Object} country Country JSON object
+     */
+    function regionMatch(country) {
+        const { region } = country;
+        if (regionSearch !== "") {
+            return region === regionSearch;
+        }
+        return true;
+    }
+
+    // Filters countries based on name and region
+    const filteredCountries = countries.filter(
+        (country) => nameMatch(country) && regionMatch(country)
+    );
 
     return (
         <>
@@ -43,7 +67,7 @@ function App() {
             <main>
                 <section className="search-section">
                     <NameInput onNameInput={handleNameSearch} />
-                    <RegionSelect />
+                    <RegionSelect onRegionSelect={handleRegionSelect} />
                 </section>
 
                 <section className="country-section">
