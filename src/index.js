@@ -5,6 +5,7 @@ import ThemeSwitch from "./components/ThemeSwitch";
 import NameInput from "./components/NameInput";
 import RegionSelect from "./components/RegionSelect";
 import Country from "./components/Country";
+import "./css/index.css";
 
 function App() {
     const [countries, setCountries] = useState([]);
@@ -71,7 +72,7 @@ function App() {
                 </section>
 
                 <section className="country-section">
-                    <ul>
+                    <ul className="country-list">
                         {filteredCountries.map((country) => (
                             <Country key={country.name} obj={country} />
                         ))}
