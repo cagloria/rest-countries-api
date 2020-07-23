@@ -32,7 +32,6 @@ body {
   height: auto;
   -ms-grid-row: 1;
   grid-row: 1;
-  margin: auto 0;
 }
 
 .country__details {
