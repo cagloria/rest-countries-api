@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import $ from "jquery";
 import ThemeSwitch from "./components/ThemeSwitch";
 import NameInput from "./components/NameInput";
 import RegionSelect from "./components/RegionSelect";
 import Country from "./components/Country";
+import CountryDetails from "./components/CountryDetails";
 import "./css/index.css";
 
 function App() {
@@ -72,11 +74,28 @@ function App() {
                 </section>
 
                 <section className="country-section">
-                    <ul className="country-list">
-                        {filteredCountries.map((country) => (
-                            <Country key={country.name} obj={country} />
-                        ))}
-                    </ul>
+                    <Router>
+                        <Switch>
+                            {filteredCountries.map((country) => (
+                                <Route
+                                    key={country.name}
+                                    path={`/${country.name}`}
+                                >
+                                    <CountryDetails obj={country} />
+                                </Route>
+                            ))}
+                            <Route path="/">
+                                <ul className="country-list">
+                                    {filteredCountries.map((country) => (
+                                        <Country
+                                            key={country.name}
+                                            obj={country}
+                                        />
+                                    ))}
+                                </ul>
+                            </Route>
+                        </Switch>
+                    </Router>
                 </section>
             </main>
         </>
