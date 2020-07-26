@@ -4,8 +4,22 @@ import { Link } from "react-router-dom";
 function Country({ obj }) {
     const { flag, name, population, region, capital } = obj;
 
+    /**
+     * Checks if a string has a length greater than zero. If so, return N/A.
+     * Used for countries that do not have a capital/region/sub region, etc.
+     * @param {String} string   String to check
+     * @returns                 Value of string or "N/A"
+     */
     function stringExists(string) {
         return string.length > 0 ? string : "N/A";
+    }
+
+    /**
+     * Removes any parentheses in the link.
+     * @param {String} link Link
+     */
+    function removeParentheses(link) {
+        return link.replace("(", "").replace(")", "");
     }
 
     return (
@@ -13,7 +27,7 @@ function Country({ obj }) {
             <img src={flag} alt={`Flag of ${name}`} className="country__flag" />
             <div className="country__details">
                 <h2>
-                    <Link to={`/${name}`}>{name}</Link>
+                    <Link to={`/${removeParentheses(name)}`}>{name}</Link>
                 </h2>
                 <p>
                     <strong>Population:</strong> {population.toLocaleString()}

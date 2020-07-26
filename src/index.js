@@ -68,11 +68,6 @@ function App() {
             </header>
 
             <main>
-                <section className="search-section">
-                    <NameInput onNameInput={handleNameSearch} />
-                    <RegionSelect onRegionSelect={handleRegionSelect} />
-                </section>
-
                 <section className="country-section">
                     <Router>
                         <Switch>
@@ -85,6 +80,10 @@ function App() {
                                 </Route>
                             ))}
                             <Route path="/">
+                                <NameInput onNameInput={handleNameSearch} />
+                                <RegionSelect
+                                    onRegionSelect={handleRegionSelect}
+                                />
                                 <ul className="country-list">
                                     {filteredCountries.map((country) => (
                                         <Country
