@@ -16,8 +16,31 @@ function CountryDetails({ obj }) {
         borders,
     } = obj;
 
+    /**
+     * Checks if a string has a length greater than zero. If so, return N/A.
+     * Used for countries that do not have a capital/region/sub region, etc.
+     * @param {String} string   String to check
+     * @returns                 Value of string or "N/A"
+     */
     function stringExists(string) {
         return string.length > 0 ? string : "N/A";
+    }
+
+    /**
+     * Returns a formatted string from an array
+     * @param {Object} arr  Array to format
+     * @returns             Array formatted into a string
+     */
+    function formatArray(arr) {
+        var string = "";
+        for (let i = 0; i < arr.length; i++) {
+            if (i === arr.length - 1) {
+                string += arr[i].name;
+            } else {
+                string += `${arr[i].name}, `;
+            }
+        }
+        return string;
     }
 
     return (
@@ -46,12 +69,10 @@ function CountryDetails({ obj }) {
                     <strong>Top Level Domain:</strong> {topLevelDomain}
                 </p>
                 <p>
-                    <strong>Currencies</strong>{" "}
-                    {currencies.map((currency) => `${currency.name}, `)}
+                    <strong>Currencies:</strong> {formatArray(currencies)}
                 </p>
                 <p>
-                    <strong>Languages</strong>{" "}
-                    {languages.map((lang) => `${lang.name}, `)}
+                    <strong>Languages:</strong> {formatArray(languages)}
                 </p>
             </div>
 
