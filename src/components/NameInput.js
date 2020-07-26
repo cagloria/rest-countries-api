@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
-function NameInput({ onNameInput }) {
+function NameInput({ defaultVal, onNameInput }) {
+    const [input, setInput] = useState(defaultVal);
+
     function handleChange(event) {
+        setInput(event.target.value);
         onNameInput(event.target.value);
     }
 
@@ -10,6 +13,7 @@ function NameInput({ onNameInput }) {
             type="text"
             aria-label="Search for a country"
             placeholder="Search for a country..."
+            value={input}
             onChange={handleChange}
         />
     );

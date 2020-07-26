@@ -80,9 +80,13 @@ function App() {
                                 </Route>
                             ))}
                             <Route path="/">
-                                <NameInput onNameInput={handleNameSearch} />
+                                <NameInput
+                                    onNameInput={handleNameSearch}
+                                    defaultVal={nameSearch}
+                                />
                                 <RegionSelect
                                     onRegionSelect={handleRegionSelect}
+                                    defaultVal={regionSearch}
                                 />
                                 <ul className="country-list">
                                     {filteredCountries.map((country) => (
