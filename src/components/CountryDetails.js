@@ -34,7 +34,13 @@ function CountryDetails({ obj }) {
             $.get(url, function (data) {
                 var listItems = [];
                 data.forEach((country) => {
-                    listItems.push(<li key={country.name}>{country.name}</li>);
+                    listItems.push(
+                        <li key={country.name}>
+                            <Link to={`/${removeParentheses(country.name)}`}>
+                                {country.name}
+                            </Link>
+                        </li>
+                    );
                 });
                 setBordersEl(<ul>{listItems.map((item) => item)}</ul>);
             }).fail(function (xhr, status, error) {
