@@ -52,3 +52,15 @@ h2 {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 40px;
 }
+
+.button-link {
+    font-size: 0.9em;
+    display: inline-block;
+    width: fit-content;
+    padding: 8px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: $color-text--dark;
+    border-radius: 5px;
+    box-shadow: 0 0 7px -2px hsl(0, 0%, 50%);
+}

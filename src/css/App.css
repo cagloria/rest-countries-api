@@ -63,3 +63,18 @@ h2 a:hover {
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 40px;
 }
+
+.button-link {
+  font-size: 0.9em;
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  color: #111517;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 7px -2px gray;
+          box-shadow: 0 0 7px -2px gray;
+}

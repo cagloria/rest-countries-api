@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import $ from "jquery";
+import "../css/CountryDetails.css";
 
 function CountryDetails({ obj }) {
     const [bordersEl, setBordersEl] = useState("N/A");
@@ -38,6 +39,7 @@ function CountryDetails({ obj }) {
                         <Link
                             key={country.name}
                             to={`/${removeParentheses(country.name)}`}
+                            className="button-link"
                         >
                             {country.name}
                         </Link>,
@@ -88,11 +90,20 @@ function CountryDetails({ obj }) {
     }
 
     return (
-        <>
-            <Link to="/">Back</Link>
-            <img src={flag} alt={`Flag of ${name}`} />
+        <section className="country-details">
+            <Link to="/" className="button-link">
+                ← Back
+            </Link>
+
+            <img
+                src={flag}
+                alt={`Flag of ${name}`}
+                className="country-details__flag"
+            />
+
             <h2>{name}</h2>
-            <div className="country-details__details">
+
+            <div className="country-details__details-1">
                 <p>
                     <strong>Native Name:</strong> {nativeName}
                 </p>
@@ -108,6 +119,9 @@ function CountryDetails({ obj }) {
                 <p>
                     <strong>Capital:</strong> {stringExists(capital)}
                 </p>
+            </div>
+
+            <div className="country-details__details-2">
                 <p>
                     <strong>Top Level Domain:</strong> {topLevelDomain}
                 </p>
@@ -118,8 +132,12 @@ function CountryDetails({ obj }) {
                     <strong>Languages:</strong> {formatArray(languages)}
                 </p>
             </div>
-            <p>Border Countries: {bordersEl}</p>
-        </>
+
+            {/* <p className="borders">
+                <strong className="borders__header">Border Countries:</strong>{" "}
+            </p> */}
+            {bordersEl}
+        </section>
     );
 }
 

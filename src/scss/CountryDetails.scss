@@ -1,0 +1,28 @@
+@import "import";
+
+.country-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto auto auto;
+    padding-top: 10px;
+    gap: 10px;
+
+    &__flag {
+        width: 100%;
+        height: auto;
+        margin: 50px 0 30px;
+    }
+
+    h2 {
+        font-size: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 0.9em;
+    }
+
+    strong {
+        font-weight: 600;
+    }
+}
