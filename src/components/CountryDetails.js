@@ -21,28 +21,30 @@ function CountryDetails({ obj }) {
     useEffect(() => {
         if (borders.length > 0) {
             // Formats string of borders into codes the API will accept
-            var str = "";
+            var codes = "";
             for (let i = 0; i < borders.length; i++) {
                 if (i === borders.length - 1) {
-                    str += borders[i];
+                    codes += borders[i];
                 } else {
-                    str += `${borders[i]};`;
+                    codes += `${borders[i]};`;
                 }
             }
-            const url = `https://restcountries.eu/rest/v2/alpha?codes=${str}`;
+            const url = `https://restcountries.eu/rest/v2/alpha?codes=${codes}`;
 
             $.get(url, function (data) {
                 var listItems = [];
                 data.forEach((country) => {
                     listItems.push(
-                        <li key={country.name}>
-                            <Link to={`/${removeParentheses(country.name)}`}>
-                                {country.name}
-                            </Link>
-                        </li>
+                        <Link
+                            key={country.name}
+                            to={`/${removeParentheses(country.name)}`}
+                        >
+                            {country.name}
+                        </Link>,
+                        " "
                     );
                 });
-                setBordersEl(<ul>{listItems.map((item) => item)}</ul>);
+                setBordersEl(listItems.map((item) => item));
             }).fail(function (xhr, status, error) {
                 console.log(`Error ${xhr.status}: ${xhr.responseJSON.message}`);
             });
@@ -116,7 +118,7 @@ function CountryDetails({ obj }) {
                     <strong>Languages:</strong> {formatArray(languages)}
                 </p>
             </div>
-            <strong>Border Countries:</strong> {bordersEl}
+            <p>Border Countries: {bordersEl}</p>
         </>
     );
 }
