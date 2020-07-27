@@ -17,6 +17,7 @@ function Country({ obj }) {
     /**
      * Removes any parentheses in the link.
      * @param {String} link Link
+     * @returns             New link without parentheses
      */
     function removeParentheses(link) {
         return link.replace("(", "").replace(")", "");

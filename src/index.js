@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import $ from "jquery";
@@ -14,9 +14,13 @@ function App() {
     const [nameSearch, setNameSearch] = useState("");
     const [regionSearch, setRegionSearch] = useState("");
 
-    $.get("https://restcountries.eu/rest/v2/all", function (data) {
-        setCountries(data);
-    });
+    useEffect(() => {
+        if (countries.length === 0) {
+            $.get("https://restcountries.eu/rest/v2/all", function (data) {
+                setCountries(data);
+            });
+        }
+    }, [countries]);
 
     /**
      * Set the state nameSearch to match NameInput's value

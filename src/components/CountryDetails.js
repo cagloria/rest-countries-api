@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import $ from "jquery";
 
 function CountryDetails({ obj }) {
+    const [bordersEl, setBordersEl] = useState("N/A");
     const {
         flag,
         name,
@@ -16,6 +18,31 @@ function CountryDetails({ obj }) {
         borders,
     } = obj;
 
+    useEffect(() => {
+        if (borders.length > 0) {
+            // Formats string of borders into codes the API will accept
+            var str = "";
+            for (let i = 0; i < borders.length; i++) {
+                if (i === borders.length - 1) {
+                    str += borders[i];
+                } else {
+                    str += `${borders[i]};`;
+                }
+            }
+            const url = `https://restcountries.eu/rest/v2/alpha?codes=${str}`;
+
+            $.get(url, function (data) {
+                var listItems = [];
+                data.forEach((country) => {
+                    listItems.push(<li key={country.name}>{country.name}</li>);
+                });
+                setBordersEl(<ul>{listItems.map((item) => item)}</ul>);
+            }).fail(function (xhr, status, error) {
+                console.log(`Error ${xhr.status}: ${xhr.responseJSON.message}`);
+            });
+        }
+    }, [borders]);
+
     /**
      * Checks if a string has a length greater than zero. If so, return N/A.
      * Used for countries that do not have a capital/region/sub region, etc.
@@ -27,7 +54,7 @@ function CountryDetails({ obj }) {
     }
 
     /**
-     * Returns a formatted string from an array
+     * Returns the array as a string with each element separated by commas.
      * @param {Object} arr  Array to format
      * @returns             Array formatted into a string
      */
@@ -43,12 +70,20 @@ function CountryDetails({ obj }) {
         return string;
     }
 
+    /**
+     * Removes any parentheses in the link.
+     * @param {String} link Link
+     * @returns             New link without parentheses
+     */
+    function removeParentheses(link) {
+        return link.replace("(", "").replace(")", "");
+    }
+
     return (
         <>
             <Link to="/">Back</Link>
             <img src={flag} alt={`Flag of ${name}`} />
             <h2>{name}</h2>
-
             <div className="country-details__details">
                 <p>
                     <strong>Native Name:</strong> {nativeName}
@@ -75,13 +110,7 @@ function CountryDetails({ obj }) {
                     <strong>Languages:</strong> {formatArray(languages)}
                 </p>
             </div>
-
-            <p>
-                <strong>Border Countries:</strong>{" "}
-                {borders.length > 0
-                    ? borders.map((border) => `${border}, `)
-                    : "N/A"}
-            </p>
+            <strong>Border Countries:</strong> {bordersEl}
         </>
     );
 }

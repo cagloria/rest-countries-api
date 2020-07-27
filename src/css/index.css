@@ -13,9 +13,9 @@ body {
 }
 
 .country {
-  border: 1px solid black;
   display: -ms-grid;
   display: grid;
+  border: 1px solid black;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
   -ms-grid-columns: 1fr;
