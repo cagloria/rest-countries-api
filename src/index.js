@@ -75,7 +75,7 @@ function App() {
                 <section className="country-section">
                     <Router>
                         <Switch>
-                            {filteredCountries.map((country) => (
+                            {countries.map((country) => (
                                 <Route
                                     key={country.name}
                                     path={`/${country.name}`}
