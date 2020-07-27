@@ -7,7 +7,7 @@ import NameInput from "./components/NameInput";
 import RegionSelect from "./components/RegionSelect";
 import Country from "./components/Country";
 import CountryDetails from "./components/CountryDetails";
-import "./css/index.css";
+import "./css/App.css";
 
 function App() {
     const [countries, setCountries] = useState([]);
@@ -72,38 +72,35 @@ function App() {
             </header>
 
             <main>
-                <section className="country-section">
-                    <Router>
-                        <Switch>
-                            {countries.map((country) => (
-                                <Route
-                                    key={country.name}
-                                    path={`/${country.name}`}
-                                >
-                                    <CountryDetails obj={country} />
-                                </Route>
-                            ))}
-                            <Route path="/">
+                <Router>
+                    <Switch>
+                        {countries.map((country) => (
+                            <Route key={country.name} path={`/${country.name}`}>
+                                <CountryDetails obj={country} />
+                            </Route>
+                        ))}
+
+                        <Route path="/">
+                            <div className="filter-form">
                                 <NameInput
                                     onNameInput={handleNameSearch}
                                     defaultVal={nameSearch}
                                 />
+
                                 <RegionSelect
                                     onRegionSelect={handleRegionSelect}
                                     defaultVal={regionSearch}
                                 />
-                                <ul className="country-list">
-                                    {filteredCountries.map((country) => (
-                                        <Country
-                                            key={country.name}
-                                            obj={country}
-                                        />
-                                    ))}
-                                </ul>
-                            </Route>
-                        </Switch>
-                    </Router>
-                </section>
+                            </div>
+
+                            <ul className="country-list">
+                                {filteredCountries.map((country) => (
+                                    <Country key={country.name} obj={country} />
+                                ))}
+                            </ul>
+                        </Route>
+                    </Switch>
+                </Router>
             </main>
         </>
     );

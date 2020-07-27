@@ -1,11 +1,19 @@
 import React from "react";
+import "../css/ThemeSwitch.css";
 
 function ThemeSwitch() {
     return (
-        <>
-            <input type="checkbox" name="theme" id="theme-switch" />
-            <label htmlFor="theme-switch">Dark mode</label>
-        </>
+        <div className="theme-switch">
+            <input
+                type="checkbox"
+                name="theme"
+                id="theme-checkbox"
+                className="theme-switch__checkbox"
+            />
+            <label htmlFor="theme-checkbox" className="theme-switch__label">
+                Dark mode
+            </label>
+        </div>
     );
 }
 

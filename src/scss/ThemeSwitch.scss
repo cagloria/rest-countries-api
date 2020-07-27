@@ -1,0 +1,12 @@
+.theme-switch {
+    display: flex;
+    align-items: center;
+    &__checkbox {
+        margin: 0 6px 0px 0;
+    }
+
+    &__label {
+        font-size: 0.8em;
+        font-weight: 600;
+    }
+}

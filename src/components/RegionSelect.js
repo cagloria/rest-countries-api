@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "../css/RegionSelect.css";
 
 function RegionSelect({ defaultVal, onRegionSelect }) {
     const [value, setValue] = useState(defaultVal);
@@ -15,6 +16,7 @@ function RegionSelect({ defaultVal, onRegionSelect }) {
             aria-label="Search by region"
             onChange={handleChange}
             value={value}
+            className="region-select"
         >
             <option value="">Filter by Region</option>
             <option value="Africa">Africa</option>

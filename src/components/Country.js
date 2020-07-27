@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "../css/Country.css";
 
 function Country({ obj }) {
     const { flag, name, population, region, capital } = obj;
@@ -25,7 +26,13 @@ function Country({ obj }) {
 
     return (
         <li className="country">
-            <img src={flag} alt={`Flag of ${name}`} className="country__flag" />
+            <div className="country__flag-wrapper">
+                <img
+                    src={flag}
+                    alt={`Flag of ${name}`}
+                    className="country__flag"
+                />
+            </div>
             <div className="country__details">
                 <h2>
                     <Link to={`/${removeParentheses(name)}`}>{name}</Link>
