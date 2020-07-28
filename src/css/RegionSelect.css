@@ -1,17 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 .region-select {
   font-family: "Nunito Sans", sans-serif;
-  font-size: 0.8em;
+  font-size: 0.75em;
   font-weight: 600;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  max-width: 196px;
+  max-width: 192px;
   height: 50px;
   margin-bottom: 15px;
-  padding: 0 20px;
+  padding: 0 16px;
   color: #1a1a1a;
   border: 0;
   border-radius: 5px;
+  background-color: white;
   -webkit-box-shadow: 0 0 11px -6px #858585;
           box-shadow: 0 0 11px -6px #858585;
 }
