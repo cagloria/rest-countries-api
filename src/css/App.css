@@ -95,7 +95,7 @@ h2 a:hover {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 6px 28px;
+  padding: 6px 23px;
   text-align: center;
   text-decoration: none;
   color: #111517;
@@ -106,4 +106,17 @@ h2 a:hover {
 
 .button-link:hover {
   background-color: #e6e6e6;
+}
+
+.button-link__icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.button-link__icon ion-icon {
+  margin-right: 12px;
 }

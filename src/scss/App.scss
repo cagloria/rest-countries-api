@@ -68,7 +68,7 @@ h2 {
     font-size: 0.9em;
     display: inline-block;
     width: fit-content;
-    padding: 6px 28px;
+    padding: 6px 23px;
     text-align: center;
     text-decoration: none;
     color: $color-text--dark;
@@ -76,5 +76,14 @@ h2 {
     box-shadow: 0 0 7px -2px hsl(0, 0%, 50%);
     &:hover {
         background-color: hsl(0, 0%, 90%);
+    }
+
+    &__icon {
+        display: flex;
+        align-items: center;
+
+        ion-icon {
+            margin-right: 12px;
+        }
     }
 }
