@@ -41,7 +41,7 @@ h2 {
 
 .filter-form {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -63,4 +63,8 @@ h2 {
     color: $color-text--dark;
     border-radius: 5px;
     box-shadow: 0 0 7px -2px hsl(0, 0%, 50%);
+
+    &:hover {
+        background-color: hsl(0, 0%, 90%);
+    }
 }

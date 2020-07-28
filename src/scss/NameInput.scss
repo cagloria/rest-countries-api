@@ -4,7 +4,6 @@ $color-input--light: hsl(0, 0%, 52%);
 .name-input {
     font-family: $font-family;
     font-size: 0.8em;
-    flex: 1;
     box-sizing: border-box;
     height: 50px;
     margin-bottom: 36px;
@@ -12,7 +11,6 @@ $color-input--light: hsl(0, 0%, 52%);
     border: 0;
     border-radius: 5px;
     box-shadow: 0 0 11px -6px $color-input--light;
-    max-width: 350px;
     &::placeholder {
         color: hsl(0, 0%, 80%);
     }
