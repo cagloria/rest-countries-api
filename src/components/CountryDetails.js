@@ -4,7 +4,7 @@ import $ from "jquery";
 import "../css/CountryDetails.css";
 
 function CountryDetails({ obj }) {
-    const [bordersEl, setBordersEl] = useState("N/A");
+    const [bordersData, setBordersData] = useState([]);
     const {
         flag,
         name,
@@ -35,18 +35,9 @@ function CountryDetails({ obj }) {
             $.get(url, function (data) {
                 var listItems = [];
                 data.forEach((country) => {
-                    listItems.push(
-                        <Link
-                            key={country.name}
-                            to={`/${removeParentheses(country.name)}`}
-                            className="button-link"
-                        >
-                            {country.name}
-                        </Link>,
-                        " "
-                    );
+                    listItems.push(country.name);
                 });
-                setBordersEl(listItems.map((item) => item));
+                setBordersData(listItems);
             }).fail(function (xhr, status, error) {
                 console.log(`Error ${xhr.status}: ${xhr.responseJSON.message}`);
             });
@@ -89,8 +80,33 @@ function CountryDetails({ obj }) {
         return link.replace("(", "").replace(")", "");
     }
 
+    const bordersEl =
+        bordersData.length > 0 ? (
+            <>
+                <p className="borders-label">
+                    <strong>Border Countries:</strong>
+                </p>
+                <ul className="borders-ul">
+                    {bordersData.map((name) => (
+                        <li key={name}>
+                            <Link
+                                to={`/${removeParentheses(name)}`}
+                                className="button-link"
+                            >
+                                {name}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </>
+        ) : (
+            <p>
+                <strong>Border Countries:</strong> N/A
+            </p>
+        );
+
     return (
-        <section className="country-details">
+        <section className="country-details-section">
             <Link to="/" className="button-link">
                 ← Back
             </Link>
@@ -98,12 +114,12 @@ function CountryDetails({ obj }) {
             <img
                 src={flag}
                 alt={`Flag of ${name}`}
-                className="country-details__flag"
+                className="country-flag"
             />
 
             <h2>{name}</h2>
 
-            <div className="country-details__details-1">
+            <div className="details-text">
                 <p>
                     <strong>Native Name:</strong> {nativeName}
                 </p>
@@ -121,7 +137,7 @@ function CountryDetails({ obj }) {
                 </p>
             </div>
 
-            <div className="country-details__details-2">
+            <div className="details-text">
                 <p>
                     <strong>Top Level Domain:</strong> {topLevelDomain}
                 </p>
@@ -133,9 +149,6 @@ function CountryDetails({ obj }) {
                 </p>
             </div>
 
-            {/* <p className="borders">
-                <strong className="borders__header">Border Countries:</strong>{" "}
-            </p> */}
             {bordersEl}
         </section>
     );

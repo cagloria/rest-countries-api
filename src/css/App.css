@@ -20,10 +20,6 @@ body {
   background-color: #fafafa;
 }
 
-main {
-  padding: 25px 20px 30px;
-}
-
 h1 {
   font-size: 0.9em;
   font-weight: 800;
@@ -41,6 +37,10 @@ h2 a {
 
 h2 a:hover {
   color: #6b6b6b;
+}
+
+.countries-section {
+  padding: 25px 20px 30px;
 }
 
 .filter-form {
@@ -70,7 +70,7 @@ h2 a:hover {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  padding: 8px 20px;
+  padding: 6px 28px;
   text-align: center;
   text-decoration: none;
   color: #111517;

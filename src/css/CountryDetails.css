@@ -1,30 +1,57 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
-.country-details {
+.country-details-section {
+  padding: 40px 28px 30px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
   -ms-grid-rows: auto auto auto auto auto auto;
       grid-template-rows: auto auto auto auto auto auto;
-  padding-top: 10px;
-  gap: 10px;
 }
 
-.country-details__flag {
+.country-details-section h2 {
+  font-size: 1.3em;
+  margin: 4px 0 0;
+}
+
+.country-details-section strong {
+  font-weight: 600;
+}
+
+.details-text {
+  margin: 10px 0;
+}
+
+.details-text p {
+  font-size: 0.9em;
+  margin: 12px 0;
+}
+
+.country-flag {
   width: 100%;
   height: auto;
-  margin: 50px 0 30px;
+  margin: 64px 0 41px;
 }
 
-.country-details h2 {
-  font-size: 1.3em;
+.borders-label {
+  font-size: 1em;
+  margin: 20px 0 17px;
+}
+
+.borders-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0;
+  padding-left: 0;
+  list-style-type: none;
+  font-size: 0.8em;
+}
+
+.borders-ul li {
+  margin-right: 10px;
   margin-bottom: 10px;
-}
-
-.country-details p {
-  font-size: 0.9em;
-}
-
-.country-details strong {
-  font-weight: 600;
+  margin: 0 10px 10px 0;
 }

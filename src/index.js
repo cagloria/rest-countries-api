@@ -81,23 +81,28 @@ function App() {
                         ))}
 
                         <Route path="/">
-                            <div className="filter-form">
-                                <NameInput
-                                    onNameInput={handleNameSearch}
-                                    defaultVal={nameSearch}
-                                />
+                            <section className="countries-section">
+                                <div className="filter-form">
+                                    <NameInput
+                                        onNameInput={handleNameSearch}
+                                        defaultVal={nameSearch}
+                                    />
 
-                                <RegionSelect
-                                    onRegionSelect={handleRegionSelect}
-                                    defaultVal={regionSearch}
-                                />
-                            </div>
+                                    <RegionSelect
+                                        onRegionSelect={handleRegionSelect}
+                                        defaultVal={regionSearch}
+                                    />
+                                </div>
 
-                            <ul className="country-list">
-                                {filteredCountries.map((country) => (
-                                    <Country key={country.name} obj={country} />
-                                ))}
-                            </ul>
+                                <ul className="country-list">
+                                    {filteredCountries.map((country) => (
+                                        <Country
+                                            key={country.name}
+                                            obj={country}
+                                        />
+                                    ))}
+                                </ul>
+                            </section>
                         </Route>
                     </Switch>
                 </Router>
