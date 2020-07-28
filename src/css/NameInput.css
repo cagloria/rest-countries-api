@@ -1,30 +1,50 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
-.name-input {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 0.8em;
+.name-input-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 50px;
+  height: 46px;
   margin-bottom: 36px;
-  padding: 0 30px;
-  border: 0;
   border-radius: 5px;
+  background-color: white;
   -webkit-box-shadow: 0 0 11px -6px #858585;
           box-shadow: 0 0 11px -6px #858585;
 }
 
-.name-input::-webkit-input-placeholder {
+.name-input-container ion-icon {
+  margin-left: 27px;
+  color: #858585;
+}
+
+.name-input-container input {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.75em;
+  position: absolute;
+  width: calc(100% - 110px);
+  height: 100%;
+  padding: 0 40px 0 70px;
+  border: 0;
+  background-color: transparent;
+}
+
+.name-input-container input::-webkit-input-placeholder {
   color: #cccccc;
 }
 
-.name-input:-ms-input-placeholder {
+.name-input-container input:-ms-input-placeholder {
   color: #cccccc;
 }
 
-.name-input::-ms-input-placeholder {
+.name-input-container input::-ms-input-placeholder {
   color: #cccccc;
 }
 
-.name-input::placeholder {
+.name-input-container input::placeholder {
   color: #cccccc;
 }

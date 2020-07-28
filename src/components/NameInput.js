@@ -10,14 +10,16 @@ function NameInput({ defaultVal, onNameInput }) {
     }
 
     return (
-        <input
-            type="text"
-            aria-label="Search for a country"
-            placeholder="Search for a country..."
-            value={input}
-            className="name-input"
-            onChange={handleChange}
-        />
+        <div className="name-input-container">
+            <ion-icon name="search-outline"></ion-icon>
+            <input
+                type="text"
+                aria-label="Search for a country"
+                placeholder="Search for a country..."
+                value={input}
+                onChange={handleChange}
+            />
+        </div>
     );
 }
 
