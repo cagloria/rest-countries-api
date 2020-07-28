@@ -6,7 +6,7 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   max-width: 192px;
-  height: 50px;
+  height: 46px;
   margin-bottom: 15px;
   padding: 0 16px;
   color: #1a1a1a;
@@ -19,4 +19,12 @@
 
 .region-select option {
   color: #1a1a1a;
+}
+
+@media (min-width: 426px) {
+  .region-select {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }

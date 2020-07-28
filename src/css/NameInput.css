@@ -48,3 +48,14 @@
 .name-input-container input::placeholder {
   color: #cccccc;
 }
+
+@media (min-width: 426px) {
+  .name-input-container {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+    min-width: 240px;
+    max-width: 385px;
+    margin-right: 20px;
+  }
+}

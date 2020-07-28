@@ -8,7 +8,7 @@ $color-elements--light: hsl(0, 0%, 100%);
     font-weight: 600;
     box-sizing: border-box;
     max-width: 192px;
-    height: 50px;
+    height: 46px;
     margin-bottom: 15px;
     padding: 0 16px;
     color: hsl(0, 0%, 10%);
@@ -18,5 +18,9 @@ $color-elements--light: hsl(0, 0%, 100%);
     box-shadow: 0 0 11px -6px $color-input--light;
     option {
         color: hsl(0, 0%, 10%);
+    }
+
+    @media (min-width: 426px) {
+        flex: 1;
     }
 }

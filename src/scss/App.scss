@@ -10,6 +10,9 @@ header {
     padding: 30px 16px;
     background-color: $color-element-bg--light;
     box-shadow: 0 -18px 24px $color-text--dark;
+    @media (min-width: 426px) {
+        padding: 35px 11vw;
+    }
 }
 
 body {
@@ -37,12 +40,20 @@ h2 {
 
 .countries-section {
     padding: 25px 20px 30px;
+
+    @media (min-width: 426px) {
+        padding: 30px 11vw 35px;
+    }
 }
 
 .filter-form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (min-width: 426px) {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
 
 .country-list {
@@ -63,7 +74,6 @@ h2 {
     color: $color-text--dark;
     border-radius: 5px;
     box-shadow: 0 0 7px -2px hsl(0, 0%, 50%);
-
     &:hover {
         background-color: hsl(0, 0%, 90%);
     }

@@ -30,4 +30,11 @@ $color-elements--light: hsl(0, 0%, 100%);
             color: hsl(0, 0%, 80%);
         }
     }
+
+    @media (min-width: 426px) {
+        flex: 2;
+        min-width: 240px;
+        max-width: 385px;
+        margin-right: 20px;
+    }
 }

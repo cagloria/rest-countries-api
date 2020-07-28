@@ -14,6 +14,12 @@ header {
           box-shadow: 0 -18px 24px #111517;
 }
 
+@media (min-width: 426px) {
+  header {
+    padding: 35px 11vw;
+  }
+}
+
 body {
   font-family: "Nunito Sans", sans-serif;
   margin: 0;
@@ -43,6 +49,12 @@ h2 a:hover {
   padding: 25px 20px 30px;
 }
 
+@media (min-width: 426px) {
+  .countries-section {
+    padding: 30px 11vw 35px;
+  }
+}
+
 .filter-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -54,6 +66,17 @@ h2 a:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media (min-width: 426px) {
+  .filter-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
 .country-list {
