@@ -1,55 +1,110 @@
 @import "import";
 
 .country-details-section {
-    display: grid;
     padding: 40px 28px 30px;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto auto auto auto;
+}
 
-    h2 {
-        font-size: 1.3em;
+.country-details {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, auto);
+    > h2 {
         margin: 4px 0 0;
     }
 
     strong {
         font-weight: 600;
     }
-}
 
-.details-text {
-    margin: 10px 0;
+    > .button-link {
+        grid-row: 1;
 
-    p {
-        font-size: 0.9em;
-        margin: 12px 0;
+        @media (min-width: 580px) {
+            grid-column: 1 / -1;
+        }
+    }
+
+    &__header {
+        font-size: 1.3em;
+        grid-row: 3;
+        @media (min-width: 580px) {
+            grid-column: 1 / -1;
+        }
+    }
+
+    &__flag {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        margin: 64px auto 41px;
+        grid-row: 2;
+        @media (min-width: 580px) {
+            margin: 64px auto 50px;
+            grid-column: 1 / -1;
+        }
+    }
+
+    &__text {
+        margin: 10px 0;
+
+        &:nth-of-type(1) {
+            grid-row: 4;
+
+            @media (min-width: 580px) {
+                grid-column: 1;
+            }
+        }
+
+        &:nth-of-type(2) {
+            grid-row: 5;
+
+            @media (min-width: 580px) {
+                grid-row: 4;
+                grid-column: 2;
+            }
+        }
+
+        p {
+            font-size: 0.9em;
+            margin: 12px 0;
+        }
+    }
+
+    @media (min-width: 426px) {
+        padding: 50px 8vw 40px;
+    }
+
+    @media (min-width: 580px) {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(5, auto);
     }
 }
 
-.country-flag {
-    width: 100%;
-    height: auto;
-    margin: 64px 0 41px;
-}
-
-.borders-label {
-    font-size: 1em;
-    margin: 20px 0 17px;
-}
-
-.borders-ul {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0;
-    padding-left: 0;
-    list-style-type: none;
-
-    li {
-        margin: 0 10px 10px 0;
-        margin-right: 10px;
-        margin-bottom: 10px;
+.borders {
+    grid-row: 6;
+    &__label {
+        font-size: 1em;
+        margin: 20px 0 17px;
     }
 
-    .button-link {
-        font-size: 0.8em;
+    &__ul {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+        padding-left: 0;
+        list-style-type: none;
+        li {
+            margin: 0 10px 10px 0;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+
+        .button-link {
+            font-size: 0.8em;
+        }
+    }
+    @media (min-width: 580px) {
+        grid-row: 5;
+        grid-column: 1 / -1;
     }
 }

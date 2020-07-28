@@ -83,10 +83,10 @@ function CountryDetails({ obj }) {
     const bordersEl =
         bordersData.length > 0 ? (
             <>
-                <p className="borders-label">
+                <p className="borders__label">
                     <strong>Border Countries:</strong>
                 </p>
-                <ul className="borders-ul">
+                <ul className="borders__ul">
                     {bordersData.map((name) => (
                         <li key={name}>
                             <Link
@@ -100,13 +100,13 @@ function CountryDetails({ obj }) {
                 </ul>
             </>
         ) : (
-            <p>
+            <p className="borders__label">
                 <strong>Border Countries:</strong> N/A
             </p>
         );
 
     return (
-        <section className="country-details-section">
+        <section className="country-details-section country-details">
             <Link to="/" className="button-link">
                 ← Back
             </Link>
@@ -114,12 +114,12 @@ function CountryDetails({ obj }) {
             <img
                 src={flag}
                 alt={`Flag of ${name}`}
-                className="country-flag"
+                className="country-details__flag"
             />
 
-            <h2>{name}</h2>
+            <h2 className="country-details__header">{name}</h2>
 
-            <div className="details-text">
+            <div className="country-details__text">
                 <p>
                     <strong>Native Name:</strong> {nativeName}
                 </p>
@@ -137,7 +137,7 @@ function CountryDetails({ obj }) {
                 </p>
             </div>
 
-            <div className="details-text">
+            <div className="country-details__text">
                 <p>
                     <strong>Top Level Domain:</strong> {topLevelDomain}
                 </p>
@@ -149,7 +149,7 @@ function CountryDetails({ obj }) {
                 </p>
             </div>
 
-            {bordersEl}
+            <div className="borders">{bordersEl}</div>
         </section>
     );
 }
