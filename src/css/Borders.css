@@ -33,7 +33,7 @@
 
 @media (min-width: 769px) {
   .borders {
-    margin-top: 67px;
+    margin-top: 40px;
     -ms-grid-row: 4;
     grid-row: 4;
     grid-column: 1 / -1;

@@ -129,6 +129,9 @@
     -ms-grid-column: 2;
     grid-column: 2;
   }
+  .country-details__text div:first-child {
+    margin-bottom: 20px;
+  }
   .country-details__text p {
     font-size: 1.15em;
     margin: 9px 0;
@@ -139,6 +142,8 @@
   .country-details {
     -webkit-column-gap: 100px;
             column-gap: 100px;
+    -ms-grid-columns: minmax(auto, 500px) 1fr;
+        grid-template-columns: minmax(auto, 500px) 1fr;
   }
 }
 
@@ -154,6 +159,9 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+  }
+  .country-details__text div:first-child {
+    margin-bottom: 0;
   }
 }
 
