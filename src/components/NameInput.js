@@ -10,7 +10,7 @@ function NameInput({ defaultVal, onNameInput }) {
     }
 
     return (
-        <div className="name-input-container">
+        <div className="name-input-container form-element">
             <ion-icon name="search-outline"></ion-icon>
             <input
                 type="text"

@@ -9,7 +9,6 @@
           align-items: center;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 46px;
   margin-bottom: 40px;
   border-radius: 5px;
   background-color: white;
@@ -24,6 +23,7 @@
 
 @media (min-width: 769px) {
   .name-input-container ion-icon {
+    font-size: 1.1em;
     margin-left: 33px;
   }
 }
@@ -40,19 +40,19 @@
 }
 
 .name-input-container input::-webkit-input-placeholder {
-  color: #cccccc;
+  color: gray;
 }
 
 .name-input-container input:-ms-input-placeholder {
-  color: #cccccc;
+  color: gray;
 }
 
 .name-input-container input::-ms-input-placeholder {
-  color: #cccccc;
+  color: gray;
 }
 
 .name-input-container input::placeholder {
-  color: #cccccc;
+  color: gray;
 }
 
 @media (min-width: 769px) {
@@ -76,6 +76,6 @@
 @media (min-width: 769px) {
   .name-input-container {
     max-width: 480px;
-    margin-bottom: 35px;
+    margin-bottom: 33px;
   }
 }

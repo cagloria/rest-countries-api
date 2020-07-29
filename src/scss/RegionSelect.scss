@@ -8,7 +8,6 @@ $color-elements--light: hsl(0, 0%, 100%);
     font-weight: 600;
     box-sizing: border-box;
     max-width: 192px;
-    height: 46px;
     margin-bottom: 15px;
     padding: 0 16px;
     color: hsl(0, 0%, 10%);
@@ -26,6 +25,7 @@ $color-elements--light: hsl(0, 0%, 100%);
 
     @media (min-width: 769px) {
         font-size: 0.9em;
-        padding: 0 11px;
+        max-width: 200px;
+        padding: 0 19px;
     }
 }

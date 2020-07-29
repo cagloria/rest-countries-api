@@ -19,7 +19,8 @@ header {
     }
 
     @media (min-width: 1441px) {
-        padding: 24px 12vw;
+        padding-right: 12vw;
+        padding-left: 12vw;
     }
 }
 
@@ -61,11 +62,12 @@ h2 {
     }
 
     @media (min-width: 769px) {
-        padding: 55px 5.5vw 45px;
+        padding: 48px 5.5vw 45px;
     }
 
     @media (min-width: 1441px) {
-        padding: 55px 12vw 45px;
+        padding-right: 12vw;
+        padding-left: 12vw;
     }
 }
 
@@ -91,7 +93,7 @@ h2 {
     }
 
     @media (min-width: 769px) {
-        gap: 70px;
+        gap: 75px;
     }
 }
 
@@ -119,5 +121,13 @@ h2 {
         ion-icon {
             margin-right: 12px;
         }
+    }
+}
+
+.form-element {
+    height: 46px;
+
+    @media (min-width: 769px) {
+        height: 55px;
     }
 }

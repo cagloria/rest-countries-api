@@ -16,7 +16,7 @@ function RegionSelect({ defaultVal, onRegionSelect }) {
             aria-label="Search by region"
             onChange={handleChange}
             value={value}
-            className="region-select"
+            className="region-select form-element"
         >
             <option value="">Filter by Region</option>
             <option value="Africa">Africa</option>
