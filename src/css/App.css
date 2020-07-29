@@ -93,30 +93,6 @@ h2 a:hover {
   }
 }
 
-.filter-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-@media (min-width: 426px) {
-  .filter-form {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
 .country-list {
   display: -ms-grid;
   display: grid;
@@ -142,6 +118,87 @@ h2 a:hover {
 
 .country-details-section {
   padding: 40px 28px 30px;
+}
+
+.filter-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (min-width: 426px) {
+  .filter-form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.text-field {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.75em;
+  padding: 0 40px 0 70px;
+  border: 0;
+  background-color: transparent;
+}
+
+.text-field::-webkit-input-placeholder {
+  color: gray;
+}
+
+.text-field:-ms-input-placeholder {
+  color: gray;
+}
+
+.text-field::-ms-input-placeholder {
+  color: gray;
+}
+
+.text-field::placeholder {
+  color: gray;
+}
+
+@media (min-width: 769px) {
+  .text-field {
+    font-size: 0.9em;
+    padding-left: 72px;
+  }
+}
+
+.select {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 0.75em;
+  font-weight: 600;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0 16px;
+  color: #1a1a1a;
+  border: 0;
+  border-radius: 5px;
+  background-color: white;
+  -webkit-box-shadow: 0 0 11px -6px #858585;
+          box-shadow: 0 0 11px -6px #858585;
+}
+
+.select option {
+  color: #1a1a1a;
+}
+
+@media (min-width: 769px) {
+  .select {
+    font-size: 0.9em;
+    padding: 0 19px;
+  }
 }
 
 .button-link {

@@ -1,31 +1,11 @@
-@import "import";
-$color-input--light: hsl(0, 0%, 52%);
-$color-elements--light: hsl(0, 0%, 100%);
-
 .region-select {
-    font-family: $font-family;
-    font-size: 0.75em;
-    font-weight: 600;
-    box-sizing: border-box;
     max-width: 192px;
     margin-bottom: 15px;
-    padding: 0 16px;
-    color: hsl(0, 0%, 10%);
-    border: 0;
-    border-radius: 5px;
-    background-color: $color-elements--light;
-    box-shadow: 0 0 11px -6px $color-input--light;
-    option {
-        color: hsl(0, 0%, 10%);
-    }
-
     @media (min-width: 426px) {
         flex: 1;
     }
 
     @media (min-width: 769px) {
-        font-size: 0.9em;
         max-width: 200px;
-        padding: 0 19px;
     }
 }

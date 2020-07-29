@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 .country-details {
   display: -ms-grid;
   display: grid;
@@ -55,29 +54,29 @@
   }
 }
 
-.country-details__text {
+.country-details__text-container {
   margin: 10px 0;
 }
 
-.country-details__text:nth-of-type(1) {
+.country-details__text-container:nth-of-type(1) {
   -ms-grid-row: 4;
   grid-row: 4;
 }
 
 @media (min-width: 580px) {
-  .country-details__text:nth-of-type(1) {
+  .country-details__text-container:nth-of-type(1) {
     -ms-grid-column: 1;
     grid-column: 1;
   }
 }
 
-.country-details__text:nth-of-type(2) {
+.country-details__text-container:nth-of-type(2) {
   -ms-grid-row: 5;
   grid-row: 5;
 }
 
 @media (min-width: 580px) {
-  .country-details__text:nth-of-type(2) {
+  .country-details__text-container:nth-of-type(2) {
     -ms-grid-row: 4;
     grid-row: 4;
     -ms-grid-column: 2;
@@ -85,7 +84,7 @@
   }
 }
 
-.country-details__text p {
+.country-details__text-container p {
   font-size: 0.9em;
   margin: 12px 0;
 }

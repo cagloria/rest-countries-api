@@ -10,13 +10,14 @@ function NameInput({ defaultVal, onNameInput }) {
     }
 
     return (
-        <div className="name-input-container form-element">
+        <div className="name-input-wrapper form-element">
             <ion-icon name="search-outline"></ion-icon>
             <input
                 type="text"
                 aria-label="Search for a country"
                 placeholder="Search for a country..."
                 value={input}
+                className="text-field name-input-wrapper__text-input"
                 onChange={handleChange}
             />
         </div>

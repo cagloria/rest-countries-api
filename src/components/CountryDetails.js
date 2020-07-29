@@ -59,7 +59,7 @@ function CountryDetails({ obj }) {
 
             <h2 className="country-details__header">{name}</h2>
 
-            <div className="country-details__text">
+            <div className="country-details__text-container">
                 <p>
                     <strong>Native Name:</strong> {nativeName}
                 </p>
@@ -77,7 +77,7 @@ function CountryDetails({ obj }) {
                 </p>
             </div>
 
-            <div className="country-details__text">
+            <div className="country-details__text-container">
                 <p>
                     <strong>Top Level Domain:</strong> {topLevelDomain}
                 </p>

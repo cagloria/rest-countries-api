@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
-.name-input-container {
+.name-input-wrapper {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -16,54 +15,26 @@
           box-shadow: 0 0 11px -6px #858585;
 }
 
-.name-input-container ion-icon {
+.name-input-wrapper ion-icon {
   margin-left: 27px;
   color: #858585;
 }
 
 @media (min-width: 769px) {
-  .name-input-container ion-icon {
+  .name-input-wrapper ion-icon {
     font-size: 1.1em;
     margin-left: 33px;
   }
 }
 
-.name-input-container input {
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 0.75em;
+.name-input-wrapper__text-input {
   position: absolute;
   width: calc(100% - 110px);
   height: 100%;
-  padding: 0 40px 0 70px;
-  border: 0;
-  background-color: transparent;
-}
-
-.name-input-container input::-webkit-input-placeholder {
-  color: gray;
-}
-
-.name-input-container input:-ms-input-placeholder {
-  color: gray;
-}
-
-.name-input-container input::-ms-input-placeholder {
-  color: gray;
-}
-
-.name-input-container input::placeholder {
-  color: gray;
-}
-
-@media (min-width: 769px) {
-  .name-input-container input {
-    font-size: 0.9em;
-    padding-left: 72px;
-  }
 }
 
 @media (min-width: 426px) {
-  .name-input-container {
+  .name-input-wrapper {
     -webkit-box-flex: 2;
         -ms-flex: 2;
             flex: 2;
@@ -74,7 +45,7 @@
 }
 
 @media (min-width: 769px) {
-  .name-input-container {
+  .name-input-wrapper {
     max-width: 480px;
     margin-bottom: 33px;
   }
