@@ -95,6 +95,14 @@ h2 {
 
 .country-details-section {
     padding: 40px 28px 30px;
+
+    @media (min-width: 426px) {
+        padding: 50px 11vw 45px;
+    }
+
+    @media (min-width: 769px) {
+        padding: 80px 5.5vw 60px;
+    }
 }
 
 // *********************************************************
@@ -150,6 +158,7 @@ h2 {
     font-size: 0.9em;
     display: inline-block;
     width: fit-content;
+    height: fit-content;
     padding: 6px 23px;
     text-align: center;
     text-decoration: none;
@@ -160,11 +169,22 @@ h2 {
         background-color: hsl(0, 0%, 90%);
     }
 
-    &__icon {
+    &--icon {
         display: flex;
         align-items: center;
+        justify-content: space-between;
         ion-icon {
             margin-right: 12px;
+        }
+    }
+
+    @media (min-width: 769px) {
+        padding: 6px 30px;
+        &--icon {
+            padding: 10px 36px;
+            ion-icon {
+                margin-right: 17px;
+            }
         }
     }
 }

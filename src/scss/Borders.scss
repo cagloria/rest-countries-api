@@ -1,8 +1,9 @@
 .borders {
-    grid-row: 6;
+    grid-row: 5;
+    grid-column: 1;
     &__label {
         font-size: 1em;
-        margin: 20px 0 17px;
+        margin: 17px 0;
     }
 
     &__ul {
@@ -21,8 +22,31 @@
             font-size: 0.8em;
         }
     }
-    @media (min-width: 580px) {
-        grid-row: 5;
+
+    @media (min-width: 769px) {
+        margin-top: 67px;
+        grid-row: 4;
         grid-column: 1 / -1;
+        &__ul {
+            li {
+                margin-right: 10px;
+            }
+        }
+    }
+
+    @media (min-width: 1200px) {
+        align-items: flex-start;
+        grid-row: 4;
+        grid-column: 2;
+        &__label {
+            min-width: 130px;
+        }
+    }
+
+    @media (min-width: 1441px) {
+        display: flex;
+        &__label {
+            margin: 0 10px 0 0;
+        }
     }
 }

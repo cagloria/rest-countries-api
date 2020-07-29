@@ -47,7 +47,7 @@ function CountryDetails({ obj }) {
 
     return (
         <section className="country-details-section country-details">
-            <Link to="/" className="button-link button-link__icon">
+            <Link to="/" className="button-link button-link--icon">
                 <ion-icon name="arrow-back-outline"></ion-icon> Back
             </Link>
 
@@ -59,34 +59,37 @@ function CountryDetails({ obj }) {
 
             <h2 className="country-details__header">{name}</h2>
 
-            <div className="country-details__text-container">
-                <p>
-                    <strong>Native Name:</strong> {nativeName}
-                </p>
-                <p>
-                    <strong>Population:</strong> {population.toLocaleString()}
-                </p>
-                <p>
-                    <strong>Region:</strong> {stringExists(region)}
-                </p>
-                <p>
-                    <strong>Sub Region:</strong> {stringExists(subregion)}
-                </p>
-                <p>
-                    <strong>Capital:</strong> {stringExists(capital)}
-                </p>
-            </div>
+            <div className="country-details__text">
+                <div>
+                    <p>
+                        <strong>Native Name:</strong> {nativeName}
+                    </p>
+                    <p>
+                        <strong>Population:</strong>{" "}
+                        {population.toLocaleString()}
+                    </p>
+                    <p>
+                        <strong>Region:</strong> {stringExists(region)}
+                    </p>
+                    <p>
+                        <strong>Sub Region:</strong> {stringExists(subregion)}
+                    </p>
+                    <p>
+                        <strong>Capital:</strong> {stringExists(capital)}
+                    </p>
+                </div>
 
-            <div className="country-details__text-container">
-                <p>
-                    <strong>Top Level Domain:</strong> {topLevelDomain}
-                </p>
-                <p>
-                    <strong>Currencies:</strong> {formatArray(currencies)}
-                </p>
-                <p>
-                    <strong>Languages:</strong> {formatArray(languages)}
-                </p>
+                <div>
+                    <p>
+                        <strong>Top Level Domain:</strong> {topLevelDomain}
+                    </p>
+                    <p>
+                        <strong>Currencies:</strong> {formatArray(currencies)}
+                    </p>
+                    <p>
+                        <strong>Languages:</strong> {formatArray(languages)}
+                    </p>
+                </div>
             </div>
 
             <Borders borders={borders} />

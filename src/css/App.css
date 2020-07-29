@@ -120,6 +120,18 @@ h2 a:hover {
   padding: 40px 28px 30px;
 }
 
+@media (min-width: 426px) {
+  .country-details-section {
+    padding: 50px 11vw 45px;
+  }
+}
+
+@media (min-width: 769px) {
+  .country-details-section {
+    padding: 80px 5.5vw 60px;
+  }
+}
+
 .filter-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -207,6 +219,9 @@ h2 a:hover {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   padding: 6px 23px;
   text-align: center;
   text-decoration: none;
@@ -220,17 +235,32 @@ h2 a:hover {
   background-color: #e6e6e6;
 }
 
-.button-link__icon {
+.button-link--icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.button-link__icon ion-icon {
+.button-link--icon ion-icon {
   margin-right: 12px;
+}
+
+@media (min-width: 769px) {
+  .button-link {
+    padding: 6px 30px;
+  }
+  .button-link--icon {
+    padding: 10px 36px;
+  }
+  .button-link--icon ion-icon {
+    margin-right: 17px;
+  }
 }
 
 .form-element {
