@@ -22,6 +22,12 @@
   color: #858585;
 }
 
+@media (min-width: 769px) {
+  .name-input-container ion-icon {
+    margin-left: 33px;
+  }
+}
+
 .name-input-container input {
   font-family: "Nunito Sans", sans-serif;
   font-size: 0.75em;
@@ -49,6 +55,13 @@
   color: #cccccc;
 }
 
+@media (min-width: 769px) {
+  .name-input-container input {
+    font-size: 0.9em;
+    padding-left: 72px;
+  }
+}
+
 @media (min-width: 426px) {
   .name-input-container {
     -webkit-box-flex: 2;
@@ -57,5 +70,12 @@
     min-width: 240px;
     max-width: 385px;
     margin-right: 20px;
+  }
+}
+
+@media (min-width: 769px) {
+  .name-input-container {
+    max-width: 480px;
+    margin-bottom: 35px;
   }
 }

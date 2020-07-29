@@ -11,7 +11,7 @@ function ThemeSwitch() {
                 className="theme-switch__checkbox"
             />
             <label htmlFor="theme-checkbox" className="theme-switch__label">
-                Dark mode
+                Dark Mode
             </label>
         </div>
     );

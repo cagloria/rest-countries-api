@@ -28,3 +28,10 @@
             flex: 1;
   }
 }
+
+@media (min-width: 769px) {
+  .region-select {
+    font-size: 0.9em;
+    padding: 0 11px;
+  }
+}

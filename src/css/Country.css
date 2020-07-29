@@ -1,7 +1,6 @@
 .country {
   display: -ms-grid;
   display: grid;
-  width: 79%;
   margin: 0 auto;
   border-radius: 5px;
   background-color: white;

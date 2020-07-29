@@ -8,10 +8,16 @@
 }
 
 .theme-switch__checkbox {
-  margin: 0 6px 0px 0;
+  margin: 0 6px 0 0;
 }
 
 .theme-switch__label {
   font-size: 0.8em;
   font-weight: 600;
+}
+
+@media (min-width: 769px) {
+  .theme-switch__label {
+    font-size: 1em;
+  }
 }

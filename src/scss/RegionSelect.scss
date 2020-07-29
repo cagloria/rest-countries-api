@@ -23,4 +23,9 @@ $color-elements--light: hsl(0, 0%, 100%);
     @media (min-width: 426px) {
         flex: 1;
     }
+
+    @media (min-width: 769px) {
+        font-size: 0.9em;
+        padding: 0 11px;
+    }
 }

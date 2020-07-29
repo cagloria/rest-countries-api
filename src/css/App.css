@@ -20,6 +20,18 @@ header {
   }
 }
 
+@media (min-width: 769px) {
+  header {
+    padding: 24px 5.6vw;
+  }
+}
+
+@media (min-width: 1441px) {
+  header {
+    padding: 24px 12vw;
+  }
+}
+
 body {
   font-family: "Nunito Sans", sans-serif;
   margin: 0;
@@ -30,6 +42,18 @@ h1 {
   font-size: 0.9em;
   font-weight: 800;
   margin: 0;
+}
+
+@media (min-width: 426px) {
+  h1 {
+    font-size: 1.2em;
+  }
+}
+
+@media (min-width: 769px) {
+  h1 {
+    font-size: 1.5em;
+  }
 }
 
 h2 {
@@ -52,6 +76,18 @@ h2 a:hover {
 @media (min-width: 426px) {
   .countries-section {
     padding: 30px 11vw 35px;
+  }
+}
+
+@media (min-width: 769px) {
+  .countries-section {
+    padding: 55px 5.5vw 45px;
+  }
+}
+
+@media (min-width: 1441px) {
+  .countries-section {
+    padding: 55px 12vw 45px;
   }
 }
 
@@ -82,11 +118,28 @@ h2 a:hover {
 .country-list {
   display: -ms-grid;
   display: grid;
-  padding-left: 0;
+  padding: 0 34px;
   list-style-type: none;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   gap: 40px;
+}
+
+@media (min-width: 426px) {
+  .country-list {
+    padding: 0;
+    gap: 55px;
+  }
+}
+
+@media (min-width: 769px) {
+  .country-list {
+    gap: 70px;
+  }
+}
+
+.country-details-section {
+  padding: 40px 28px 30px;
 }
 
 .button-link {
