@@ -47,7 +47,7 @@ function CountryDetails({ obj }) {
 
     return (
         <section className="country-details-section country-details">
-            <Link to="/" className="button-link button-link--icon">
+            <Link to="/" className="button-link button-link--icon element">
                 <ion-icon name="arrow-back-outline"></ion-icon> Back
             </Link>
 

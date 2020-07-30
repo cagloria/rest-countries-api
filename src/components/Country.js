@@ -25,7 +25,7 @@ function Country({ obj }) {
     }
 
     return (
-        <li className="country">
+        <li className="country element">
             <div className="country__flag-wrapper">
                 <img
                     src={flag}

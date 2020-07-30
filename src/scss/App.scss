@@ -1,9 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
 $font-family: "Nunito Sans", sans-serif;
-$color-elements--light: hsl(0, 0%, 100%);
-$color-body-bg--light: hsl(0, 0%, 98%);
-$color-input--light: hsl(0, 0%, 52%);
-$color-text--dark: hsl(200, 15%, 8%);
+$element-bg--light: hsl(0, 0%, 100%);
+$body-bg--light: hsl(0, 0%, 98%);
+$element-text--light: hsl(200, 15%, 8%);
+$element-input-text--light: hsl(0, 0%, 52%);
+
+.element {
+    color: $element-text--light;
+    background-color: $element-bg--light;
+    box-shadow: 0 0 11px -8px hsl(200, 15%, 8%);
+    ion-icon {
+        color: $element-input-text--light;
+    }
+
+    a {
+        color: $element-text--light;
+        &:hover {
+            color: hsl(0, 0%, 42%);
+        }
+    }
+}
 
 // *********************************************************
 // Base
@@ -12,8 +28,6 @@ header {
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 30px 16px;
-    background-color: $color-elements--light;
-    box-shadow: 0 -18px 24px $color-text--dark;
     @media (min-width: 426px) {
         padding: 35px 11vw;
     }
@@ -31,7 +45,7 @@ header {
 body {
     font-family: $font-family;
     margin: 0;
-    background-color: $color-body-bg--light;
+    background-color: $body-bg--light;
 }
 
 h1 {
@@ -49,13 +63,14 @@ h1 {
 
 h2 {
     font-size: 1.1em;
+    color: $element-text--light;
     a {
         text-decoration: none;
-        color: $color-text--dark;
-        &:hover {
-            color: hsl(0, 0%, 42%);
-        }
     }
+}
+
+p {
+    color: $element-text--light;
 }
 
 // *********************************************************
@@ -142,8 +157,6 @@ h2 {
     color: hsl(0, 0%, 10%);
     border: 0;
     border-radius: 5px;
-    background-color: $color-elements--light;
-    box-shadow: 0 0 11px -6px $color-input--light;
     option {
         color: hsl(0, 0%, 10%);
     }
@@ -162,9 +175,7 @@ h2 {
     padding: 6px 23px;
     text-align: center;
     text-decoration: none;
-    color: $color-text--dark;
     border-radius: 5px;
-    box-shadow: 0 0 7px -2px hsl(0, 0%, 50%);
     &:hover {
         background-color: hsl(0, 0%, 90%);
     }

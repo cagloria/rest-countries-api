@@ -52,7 +52,7 @@ function Borders({ borders }) {
                         <li key={name}>
                             <Link
                                 to={`/${removeParentheses(name)}`}
-                                className="button-link"
+                                className="button-link element"
                             >
                                 {name}
                             </Link>

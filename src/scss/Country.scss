@@ -1,12 +1,9 @@
-$color-element-bg--light: hsl(0, 0%, 100%);
 $border-radius: 5px;
 
 .country {
     display: grid;
     margin: 0 auto;
     border-radius: $border-radius;
-    background-color: $color-element-bg--light;
-    box-shadow: 0 0 24px -6px hsl(0, 0%, 81%);
     grid-template-rows: minmax(auto, 160px) 1fr;
     grid-template-columns: 1fr;
     > * {

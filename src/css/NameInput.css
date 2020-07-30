@@ -10,14 +10,10 @@
           box-sizing: border-box;
   margin-bottom: 40px;
   border-radius: 5px;
-  background-color: white;
-  -webkit-box-shadow: 0 0 11px -6px #858585;
-          box-shadow: 0 0 11px -6px #858585;
 }
 
 .name-input-wrapper ion-icon {
   margin-left: 27px;
-  color: #858585;
 }
 
 @media (min-width: 769px) {

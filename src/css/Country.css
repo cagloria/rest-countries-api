@@ -3,9 +3,6 @@
   display: grid;
   margin: 0 auto;
   border-radius: 5px;
-  background-color: white;
-  -webkit-box-shadow: 0 0 24px -6px #cfcfcf;
-          box-shadow: 0 0 24px -6px #cfcfcf;
   -ms-grid-rows: minmax(auto, 160px) 1fr;
       grid-template-rows: minmax(auto, 160px) 1fr;
   -ms-grid-columns: 1fr;

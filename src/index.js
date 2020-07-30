@@ -13,6 +13,7 @@ function App() {
     const [countries, setCountries] = useState([]);
     const [nameSearch, setNameSearch] = useState("");
     const [regionSearch, setRegionSearch] = useState("");
+    const [darkMode, setDarkMode] = useState(false);
 
     useEffect(() => {
         if (countries.length === 0) {
@@ -21,6 +22,10 @@ function App() {
             });
         }
     }, [countries]);
+
+    function handleThemeSwitch(value) {
+        setDarkMode(value);
+    }
 
     /**
      * Set the state nameSearch to match NameInput's value
@@ -66,9 +71,9 @@ function App() {
 
     return (
         <>
-            <header>
+            <header className="element">
                 <h1>Where in the world?</h1>
-                <ThemeSwitch />
+                <ThemeSwitch onThemeSwitch={handleThemeSwitch} />
             </header>
 
             <main>
