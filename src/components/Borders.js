@@ -27,7 +27,7 @@ function Borders({ borders }) {
                 });
                 setNames(items);
             }).fail(function (xhr, status, error) {
-                setError(`Error ${xhr.status}: ${xhr.responseJSON.message}`);
+                setError(`Error ${xhr.status}. ${xhr.responseText}`);
             });
         }
     }, [borders]);
@@ -69,7 +69,7 @@ function Borders({ borders }) {
     return (
         <div className="borders">
             {error.length > 0 ? (
-                <p>There was a problem requesting border data: {error}</p>
+                <p>There was a problem requesting border data. {error}</p>
             ) : (
                 bordersEl
             )}

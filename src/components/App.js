@@ -15,12 +15,23 @@ function App() {
     const [nameSearch, setNameSearch] = useState("");
     const [regionSearch, setRegionSearch] = useState("");
     const [darkMode, setDarkMode] = useState(false);
+    const [error, setError] = useState("");
+    const [message, setMessage] = useState(<p>Requesting data...</p>);
 
     useEffect(() => {
         if (countries.length === 0) {
             $.get("https://restcountries.eu/rest/v2/all", function (data) {
                 setCountries(data);
-            });
+            })
+                .done(function () {
+                    setMessage(undefined);
+                })
+                .fail(function (xhr, status, error) {
+                    setError(
+                        `Could not retrieve country data. ` +
+                            `Error ${xhr.status}. ${xhr.responseText}`
+                    );
+                });
         }
     }, [countries]);
 
@@ -70,6 +81,17 @@ function App() {
         (country) => nameMatch(country) && regionMatch(country)
     );
 
+    const homeCountryContent =
+        error.length > 0 ? (
+            <p>{error}</p>
+        ) : (
+            <ul className="country-list">
+                {filteredCountries.map((country) => (
+                    <Country key={country.name} obj={country} />
+                ))}
+            </ul>
+        );
+
     return (
         <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
             <GlobalStyles />
@@ -101,14 +123,9 @@ function App() {
                                     />
                                 </div>
 
-                                <ul className="country-list">
-                                    {filteredCountries.map((country) => (
-                                        <Country
-                                            key={country.name}
-                                            obj={country}
-                                        />
-                                    ))}
-                                </ul>
+                                {message}
+
+                                {homeCountryContent}
                             </section>
                         </Route>
                     </Switch>
