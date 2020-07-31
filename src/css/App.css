@@ -1,23 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap");
-.element {
-  color: #111517;
-  background-color: white;
-  -webkit-box-shadow: 0 0 11px -8px #111517;
-          box-shadow: 0 0 11px -8px #111517;
-}
-
-.element ion-icon {
-  color: #858585;
-}
-
-.element a {
-  color: #111517;
-}
-
-.element a:hover {
-  color: #6b6b6b;
-}
-
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -52,7 +33,6 @@ header {
 body {
   font-family: "Nunito Sans", sans-serif;
   margin: 0;
-  background-color: #fafafa;
 }
 
 h1 {
@@ -75,15 +55,10 @@ h1 {
 
 h2 {
   font-size: 1.1em;
-  color: #111517;
 }
 
 h2 a {
   text-decoration: none;
-}
-
-p {
-  color: #111517;
 }
 
 .countries-section {
@@ -148,6 +123,11 @@ p {
   }
 }
 
+.element {
+  -webkit-box-shadow: 0 0 11px -8px #111517;
+          box-shadow: 0 0 11px -8px #111517;
+}
+
 .filter-form {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -180,22 +160,6 @@ p {
   background-color: transparent;
 }
 
-.text-field::-webkit-input-placeholder {
-  color: gray;
-}
-
-.text-field:-ms-input-placeholder {
-  color: gray;
-}
-
-.text-field::-ms-input-placeholder {
-  color: gray;
-}
-
-.text-field::placeholder {
-  color: gray;
-}
-
 @media (min-width: 769px) {
   .text-field {
     font-size: 0.9em;
@@ -210,13 +174,8 @@ p {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 0 16px;
-  color: #1a1a1a;
   border: 0;
   border-radius: 5px;
-}
-
-.select option {
-  color: #1a1a1a;
 }
 
 @media (min-width: 769px) {
@@ -239,10 +198,6 @@ p {
   text-align: center;
   text-decoration: none;
   border-radius: 5px;
-}
-
-.button-link:hover {
-  background-color: #e6e6e6;
 }
 
 .button-link--icon {

@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles, lightTheme, darkTheme } from "./Themes";
 import $ from "jquery";
 import ThemeSwitch from "./ThemeSwitch";
 import NameInput from "./NameInput";
@@ -22,8 +24,8 @@ function App() {
         }
     }, [countries]);
 
-    function handleThemeSwitch(value) {
-        setDarkMode(value);
+    function toggleTheme(onDarkMode) {
+        setDarkMode(onDarkMode);
     }
 
     /**
@@ -69,10 +71,11 @@ function App() {
     );
 
     return (
-        <>
+        <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
+            <GlobalStyles />
             <header className="element">
                 <h1>Where in the world?</h1>
-                <ThemeSwitch onThemeSwitch={handleThemeSwitch} />
+                <ThemeSwitch onThemeSwitch={toggleTheme} />
             </header>
 
             <main>
@@ -111,7 +114,7 @@ function App() {
                     </Switch>
                 </Router>
             </main>
-        </>
+        </ThemeProvider>
     );
 }
 

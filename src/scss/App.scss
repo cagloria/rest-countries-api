@@ -5,22 +5,6 @@ $body-bg--light: hsl(0, 0%, 98%);
 $element-text--light: hsl(200, 15%, 8%);
 $element-input-text--light: hsl(0, 0%, 52%);
 
-.element {
-    color: $element-text--light;
-    background-color: $element-bg--light;
-    box-shadow: 0 0 11px -8px hsl(200, 15%, 8%);
-    ion-icon {
-        color: $element-input-text--light;
-    }
-
-    a {
-        color: $element-text--light;
-        &:hover {
-            color: hsl(0, 0%, 42%);
-        }
-    }
-}
-
 // *********************************************************
 // Base
 header {
@@ -45,7 +29,6 @@ header {
 body {
     font-family: $font-family;
     margin: 0;
-    background-color: $body-bg--light;
 }
 
 h1 {
@@ -63,14 +46,9 @@ h1 {
 
 h2 {
     font-size: 1.1em;
-    color: $element-text--light;
     a {
         text-decoration: none;
     }
-}
-
-p {
-    color: $element-text--light;
 }
 
 // *********************************************************
@@ -122,6 +100,10 @@ p {
 
 // *********************************************************
 // Elements
+.element {
+    box-shadow: 0 0 11px -8px hsl(200, 15%, 8%);
+}
+
 .filter-form {
     display: flex;
     flex-direction: column;
@@ -138,9 +120,6 @@ p {
     padding: 0 40px 0 70px;
     border: 0;
     background-color: transparent;
-    &::placeholder {
-        color: hsl(0, 0%, 50%);
-    }
 
     @media (min-width: 769px) {
         font-size: 0.9em;
@@ -154,12 +133,8 @@ p {
     font-weight: 600;
     box-sizing: border-box;
     padding: 0 16px;
-    color: hsl(0, 0%, 10%);
     border: 0;
     border-radius: 5px;
-    option {
-        color: hsl(0, 0%, 10%);
-    }
 
     @media (min-width: 769px) {
         font-size: 0.9em;
@@ -176,9 +151,6 @@ p {
     text-align: center;
     text-decoration: none;
     border-radius: 5px;
-    &:hover {
-        background-color: hsl(0, 0%, 90%);
-    }
 
     &--icon {
         display: flex;
