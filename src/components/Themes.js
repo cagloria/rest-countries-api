@@ -31,12 +31,17 @@ export const GlobalStyles = createGlobalStyle`
         }
     }
 
+    ion-icon {
+        color: ${({ theme }) => theme.inputText};
+    }
+
     .element {
         color: ${({ theme }) => theme.text};
         background-color: ${({ theme }) => theme.elementBG};
-        ion-icon {
-            color: ${({ theme }) => theme.inputText};
-        }
+    }
+
+    .theme-switch {
+        color: ${({ theme }) => theme.text};
     }
 
     .select {

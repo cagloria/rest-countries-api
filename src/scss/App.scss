@@ -142,6 +142,13 @@ h2 {
     }
 }
 
+button {
+    font-family: $font-family;
+    &:hover {
+        cursor: pointer;
+    }
+}
+
 .button-link {
     font-size: 0.9em;
     display: inline-block;

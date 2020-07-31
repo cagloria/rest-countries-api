@@ -5,19 +5,18 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-.theme-switch__checkbox {
-  margin: 0 6px 0 0;
-}
-
-.theme-switch__label {
   font-size: 0.8em;
-  font-weight: 600;
+  padding: 0;
+  background-color: transparent;
+  border: 0;
+}
+
+.theme-switch ion-icon {
+  margin-right: 8px;
 }
 
 @media (min-width: 769px) {
-  .theme-switch__label {
+  .theme-switch {
     font-size: 1em;
   }
 }

@@ -4,25 +4,19 @@ import "../css/ThemeSwitch.css";
 function ThemeSwitch({ onThemeSwitch }) {
     const [darkMode, setDarkMode] = useState(false);
 
-    function handleThemeSwitch(event) {
-        setDarkMode(event.target.checked);
-        onThemeSwitch(event.target.checked);
+    function handleThemeSwitch() {
+        setDarkMode(!darkMode);
+        onThemeSwitch(!darkMode);
     }
 
     return (
-        <div className="theme-switch">
-            <input
-                type="checkbox"
-                name="theme"
-                id="theme-checkbox"
-                className="theme-switch__checkbox"
-                checked={darkMode}
-                onChange={handleThemeSwitch}
-            />
-            <label htmlFor="theme-checkbox" className="theme-switch__label">
-                Dark Mode
-            </label>
-        </div>
+        <button className="theme-switch" onClick={handleThemeSwitch}>
+            <ion-icon
+                name={darkMode ? "moon" : "sunny"}
+                aria-hidden="true"
+            ></ion-icon>
+            {darkMode ? "Light" : "Dark"} Mode
+        </button>
     );
 }
 

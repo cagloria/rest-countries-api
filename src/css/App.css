@@ -185,6 +185,14 @@ h2 a {
   }
 }
 
+button {
+  font-family: "Nunito Sans", sans-serif;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
 .button-link {
   font-size: 0.9em;
   display: inline-block;

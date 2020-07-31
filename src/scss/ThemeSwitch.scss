@@ -1,15 +1,15 @@
 .theme-switch {
     display: flex;
     align-items: center;
-    &__checkbox {
-        margin: 0 6px 0 0;
+    font-size: 0.8em;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+    ion-icon {
+        margin-right: 8px;
     }
 
-    &__label {
-        font-size: 0.8em;
-        font-weight: 600;
-        @media (min-width: 769px) {
-            font-size: 1em;
-        }
+    @media (min-width: 769px) {
+        font-size: 1em;
     }
 }
