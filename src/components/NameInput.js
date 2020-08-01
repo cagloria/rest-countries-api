@@ -11,7 +11,7 @@ function NameInput({ defaultVal, onNameInput }) {
 
     return (
         <div className="name-input-wrapper form-element element">
-            <ion-icon name="search-outline"></ion-icon>
+            <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
             <input
                 type="text"
                 aria-label="Search for a country"
