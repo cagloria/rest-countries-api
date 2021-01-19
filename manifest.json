@@ -1,0 +1,15 @@
+{
+    "short_name": "REST Countries API",
+    "name": "REST Countries API",
+    "icons": [
+        {
+            "src": "favicon-32x32.png",
+            "type": "image/png",
+            "sizes": "32x32"
+        }
+    ],
+    "start_url": ".",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+}
