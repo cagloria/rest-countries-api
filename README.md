@@ -6,6 +6,8 @@
 
 [Frontend Mentor](https://www.frontendmentor.io) challenges allow you to improve your skills in a real-life workflow.
 
+This project has been deployed to [cagloria.github.io](https://cagloria.github.io/rest-countries-api/).
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## The challenge
